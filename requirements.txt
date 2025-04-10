@@ -1,0 +1,10 @@
+# Core dependencies
+fpdf>=1.7.2
+Pillow>=9.0.0
+python-docx>=0.8.11
+pypdf2>=2.0.0  # or PyPDF2>=2.0.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+setuptools>=60.0.0
+wheel>=0.37.0
