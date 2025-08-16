@@ -1,13 +1,8 @@
-LICENSE.md
+pyproject.toml
 setup.py
 waao/__init__.py
-waao/conversion.py
-waao/disp.py
-waao/fileops.py
-waao/search.py
 waao.egg-info/PKG-INFO
 waao.egg-info/SOURCES.txt
 waao.egg-info/dependency_links.txt
-waao.egg-info/entry_points.txt
-waao.egg-info/requires.txt
+waao.egg-info/not-zip-safe
 waao.egg-info/top_level.txt

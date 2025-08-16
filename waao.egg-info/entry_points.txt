@@ -1,5 +1,0 @@
-[console_scripts]
-conversions = conversions:main
-disp = disp:main
-fileops = fileops:main
-search = search:main

@@ -1,4 +1,0 @@
-fpdf
-Pillow
-python-docx
-PyPDF2

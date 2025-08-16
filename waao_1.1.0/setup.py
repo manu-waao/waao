@@ -1,27 +1,31 @@
-from setuptools import setup, Extension
 import os
+from setuptools import setup, find_packages
 
-waaoModule = Extension(
-    "waao._waao",
-    sources=[
-        "pythonBindings/pyWaao.c",
-        "src/waaoUtils.c",
-        "src/waaoIo.c",
-        "src/waaoArchive.c",
-        "src/waaoConvert.c"
-    ],
-    include_dirs=["include"],
-    extra_compile_args=["-O3", "-std=c11"]
-)
+def read(fname):
+    here = os.path.abspath(os.path.dirname(__file__))
+    with open(os.path.join(here, fname), encoding="utf-8") as f:
+        return f.read()
 
 setup(
     name="waao",
     version="1.1.0",
-    packages=["waao"],
-    description="WAAO: fast C utilities for files, archives, and conversions with Python bindings",
-    ext_modules=[waaoModule],
-    long_description_content_type='text/markdown',
-    author="manu-waao",
+    description="WAAO: Hybrid CPython package ",
+    author="Manu Kumar",
     author_email="manukumar4648@gmail.com",
-)
+    url="https://github.com/manu-waao/waao",
+    license="MIT",
+    packages=find_packages(where=".", include=["waao", "waao.*"]),
+    package_dir={"waao": "waao"},
+    include_package_data=True,
 
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+
+    python_requires=">=3.7",
+    install_requires=[],
+    zip_safe=False,
+)
